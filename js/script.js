@@ -1,16 +1,25 @@
 console.log('JS OK')
 
-const text = prompt('Età passeggero?');
-const textAsNumber = parseInt(text);
-console.log(textAsNumber);
+const età = prompt('Età passeggero?');
+const etàNumber = parseInt(età);
 
 
 const km = prompt ('km percorsi?')
-const number=parseInt(km);
-console.log(km);
+const kmNumber=parseInt(km);
 
-if ('under18') {
+let costo =0.21 * kmNumber;
+
+
+
+if (etàNumber < 18) 
+{
+    costo = costo - (costo * 0.20)
     
-} else {
-    
+} 
+else if (etàNumber> 65)
+ {
+    costo = costo - (costo * 0.40)
+
 }
+
+console.log(costo);
